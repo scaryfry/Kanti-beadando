@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MauiApp1.MainPage">
+
+    <VerticalStackLayout
+        Padding="30"
+        Spacing="25"
+        HorizontalOptions="Center">
+
+        <!-- ===== 3x3 TÁBLA ===== -->
+        <Grid
+            x:Name="BoardGrid"
+            RowDefinitions="Auto,Auto,Auto"
+            ColumnDefinitions="Auto,Auto,Auto"
+            RowSpacing="50"
+            ColumnSpacing="40"
+            HorizontalOptions="Center">
+
+            <!-- 1. sor -->
+            <Border Grid.Row="0" Grid.Column="0">
+                <Label x:Name="lbl00" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="1">
+                <Label x:Name="lbl01" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="0" Grid.Column="2">
+                <Label x:Name="lbl02" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+
+            <!-- 2. sor -->
+            <Border Grid.Row="1" Grid.Column="0">
+                <Label x:Name="lbl10" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="1">
+                <Label x:Name="lbl11" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="1" Grid.Column="2">
+                <Label x:Name="lbl12" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+
+            <!-- 3. sor -->
+            <Border Grid.Row="2" Grid.Column="0">
+                <Label x:Name="lbl20" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="2" Grid.Column="1">
+                <Label x:Name="lbl21" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+            <Border Grid.Row="2" Grid.Column="2">
+                <Label x:Name="lbl22" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Border>
+        </Grid>
+
+        <!-- ===== GOMBOK ===== -->
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" >
+            <Button Text="A" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseA_Clicked" />
+            <Button Text="B" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseB_Clicked" />
+            <Button Text="C" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseC_Clicked" />
+            <Button Text="D" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseD_Clicked" />
+        </HorizontalStackLayout>
+
+        <Button Text="Nullázás" Clicked="Reset_Clicked" HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
