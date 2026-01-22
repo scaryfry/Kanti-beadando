@@ -1,9 +1,11 @@
 import express from "express";
 import * as db from "./db.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 
 app.get("/fours", (req, res) => {
