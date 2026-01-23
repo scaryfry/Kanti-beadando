@@ -31,18 +31,6 @@ app.post("/fours", (req, res) => {
   if (db.getAllFours().some((four) => four.vals === vals)) {
     return res.status(409).json({ message: "Already exists" });
   }
-  let allValid = true;
-  for (let i = 0; i < vals.length; i++) {
-    const digit = parseInt(vals[i], 10); 
-    console.log(digit);
-    if (digit < 1 || digit > 4) {
-      allValid = false;
-      break; 
-    }
-  }
-  if (!allValid) {
-    return res.status(400).json({ message: "Invalid data" });
-  }
   db.addFour(vals);
   res.status(201).json({ message: "Created" });
 });

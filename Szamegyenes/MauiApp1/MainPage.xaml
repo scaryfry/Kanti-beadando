@@ -9,7 +9,6 @@
         Spacing="25"
         HorizontalOptions="Center">
 
-        <!-- ===== 3x3 TÁBLA ===== -->
         <Grid
             x:Name="BoardGrid"
             RowDefinitions="Auto,Auto,Auto"
@@ -18,7 +17,6 @@
             ColumnSpacing="40"
             HorizontalOptions="Center">
 
-            <!-- 1. sor -->
             <Border Grid.Row="0" Grid.Column="0">
                 <Label x:Name="lbl00" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
             </Border>
@@ -29,7 +27,6 @@
                 <Label x:Name="lbl02" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
             </Border>
 
-            <!-- 2. sor -->
             <Border Grid.Row="1" Grid.Column="0">
                 <Label x:Name="lbl10" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
             </Border>
@@ -40,7 +37,6 @@
                 <Label x:Name="lbl12" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
             </Border>
 
-            <!-- 3. sor -->
             <Border Grid.Row="2" Grid.Column="0">
                 <Label x:Name="lbl20" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
             </Border>
@@ -52,7 +48,6 @@
             </Border>
         </Grid>
 
-        <!-- ===== GOMBOK ===== -->
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" >
             <Button Text="A" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseA_Clicked" />
             <Button Text="B" HeightRequest="80" WidthRequest="60"   Clicked="IncreaseB_Clicked" />

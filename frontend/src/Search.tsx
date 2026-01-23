@@ -1,7 +1,7 @@
 import { useState } from "react"
 import type { Fours } from "./types/Fours"
 import apiClient from "./api/apiClient"
-import { toast } from "react-toastify/unstyled";
+import { toast } from "react-toastify";
 
 const Search = () => {
     const [id, setId] = useState(0);
@@ -9,8 +9,9 @@ const Search = () => {
 
     const search = () => {
         apiClient.get(`/fours/${id}`).then((response) => {
-            setFours(response.data)
+            setFours(response.data);
         }).catch(() => {
+
             toast.error("Error fetching Fours")
         })
     }

@@ -21,7 +21,7 @@ const Create = () => {
         <>
         <div>Create page</div>
         <label>Vals</label>
-        <input maxLength={4} type="text" onChange={(e) => setFours({...fours, vals: e.target.value})} />
+        <input maxLength={5} type="text" onChange={(e) => setFours({...fours, vals: e.target.value})} />
         <br />
         <button style={{marginRight: "10px"}} onClick={submit}>Submit</button>
         <button style={{marginLeft: "10px"}} onClick={() => navigate('/')}>Go Back</button>
